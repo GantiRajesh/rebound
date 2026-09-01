@@ -5,12 +5,13 @@
  * Nothing else changes. See docs/UPDATING.md → "Adding a new region".
  */
 import au from './au.json';
-import uk from './uk.json';
 
-export const regions = { au, uk };
+
+export const regions = { au};
 
 /** Shown greyed-out in the country picker so users know what's planned. */
 export const COMING_SOON = [
+  { id: 'ca', fullName: 'United Kingdom', flag: '🇬🇧' },
   { id: 'ca', fullName: 'Canada', flag: '🇨🇦' },
   { id: 'nz', fullName: 'New Zealand', flag: '🇳🇿' },
   { id: 'ie', fullName: 'Ireland', flag: '🇮🇪' },
