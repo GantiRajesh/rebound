@@ -36,13 +36,13 @@ export default function Reset() {
         <h2 style={{ marginBottom: 9 }}>If you just want to talk to someone</h2>
         <p style={{ color: 'var(--soft)', marginBottom: 10 }}>
           Sometimes what helps most is simply being heard, without an agenda and without a clock.{' '}
-          <a href="http://listeningtreecounseling.com/" target="_blank" rel="noopener noreferrer sponsored">
+          <a href="https://www.listeningtreecounseling.com/" target="_blank" rel="noopener noreferrer sponsored">
             Listening Tree Counselling
           </a>{' '}
           offers a quiet, confidential space for exactly that: unhurried conversations, at your
           pace, with an accredited counsellor. You can reach out by phone, WhatsApp or message.
         </p>
-        <a className="btn ghost small" href="http://listeningtreecounseling.com/" target="_blank" rel="noopener noreferrer sponsored">
+        <a className="btn ghost small" href="https://www.listeningtreecounseling.com/" target="_blank" rel="noopener noreferrer sponsored">
           Visit Listening Tree Counselling
         </a>
       </div>
