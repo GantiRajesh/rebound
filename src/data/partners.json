@@ -1,0 +1,32 @@
+{
+  "types": [
+    { "id": "solicitor", "label": "Employment solicitors & lawyers" },
+    { "id": "recruitment", "label": "Recruitment agencies" },
+    { "id": "counsellor", "label": "Counsellors & career coaches" },
+    { "id": "financial", "label": "Financial advisers & counsellors" },
+    { "id": "outplacement", "label": "Outplacement & HR consultancies" }
+  ],
+  "partners": [
+    {
+      "id": "listening-tree",
+      "name": "Listening Tree Counselling",
+      "type": "counsellor",
+      "regions": ["au", "uk"],
+      "services": ["One-to-one counselling", "Unhurried, confidential conversations"],
+      "referralUrl": "http://listeningtreecounseling.com/",
+      "model": "free",
+      "status": "live"
+    },
+    {
+      "id": "example-legal",
+      "name": "Example Employment Law",
+      "type": "solicitor",
+      "regions": ["au"],
+      "services": ["Document review", "Unfair dismissal advice"],
+      "referralUrl": "https://example.com/employment-law",
+      "model": "pay-per-lead",
+      "status": "example",
+      "note": "Sample entry. Replace with real partners as agreements are signed. Entries with status 'example' are never shown publicly. `model` records your commercial arrangement: pay-per-lead, sponsored, resale, or free. `referralUrl` is the partner page your tracked links point to."
+    }
+  ]
+}

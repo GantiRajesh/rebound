@@ -1,0 +1,112 @@
+{
+  "id": "au",
+  "name": "AU",
+  "fullName": "Australia",
+  "flag": "🇦🇺",
+  "currency": "AUD",
+  "currencySymbol": "$",
+  "dateFormat": "DD/MM/YYYY",
+  "terminology": { "redundancy": "redundancy", "unemploymentBenefit": "JobSeeker" },
+  "deadline": { "days": 21, "body": "the Fair Work Commission", "url": "https://www.fwc.gov.au/job-loss-or-dismissal" },
+  "benefitUrl": "https://www.servicesaustralia.gov.au/jobseeker-payment",
+  "governance": {
+    "source": "Fair Work Ombudsman (Fair Work Act 2009, NES)",
+    "sourceUrl": "https://www.fairwork.gov.au/tools-and-resources/fact-sheets/minimum-workplace-entitlements/notice-of-termination-and-redundancy-pay",
+    "officialCalc": "the Fair Work Ombudsman calculator",
+    "lastChecked": "2026-07-24",
+    "reviewer": "UNREVIEWED. Engage an Australian employment lawyer before public launch",
+    "changeLog": [
+      { "date": "2026-07-24", "change": "Initial ruleset authored from Fair Work Ombudsman published tables." }
+    ]
+  },
+  "rules": {
+    "noticeBands": [
+      { "maxYears": 1, "weeks": 1 },
+      { "maxYears": 3, "weeks": 2 },
+      { "maxYears": 5, "weeks": 3 },
+      { "maxYears": null, "weeks": 4 }
+    ],
+    "noticeAgeBonus": { "minAge": 45, "minYears": 2, "extraWeeks": 1 },
+    "redundancyModel": "service-bands",
+    "redundancyBands": [
+      { "minYears": 1, "maxYears": 2, "weeks": 4 },
+      { "minYears": 2, "maxYears": 3, "weeks": 6 },
+      { "minYears": 3, "maxYears": 4, "weeks": 7 },
+      { "minYears": 4, "maxYears": 5, "weeks": 8 },
+      { "minYears": 5, "maxYears": 6, "weeks": 10 },
+      { "minYears": 6, "maxYears": 7, "weeks": 11 },
+      { "minYears": 7, "maxYears": 8, "weeks": 13 },
+      { "minYears": 8, "maxYears": 9, "weeks": 14 },
+      { "minYears": 9, "maxYears": 10, "weeks": 16 },
+      { "minYears": 10, "maxYears": null, "weeks": 12 }
+    ],
+    "weeklyPayCap": null,
+    "smallBusinessExemption": {
+      "applies": true,
+      "threshold": 15,
+      "note": "Small businesses with fewer than 15 employees are generally not required to pay redundancy pay under the NES. Notice and unused leave still apply. Some awards have their own schemes, so check yours."
+    },
+    "qualifyingYears": 1,
+    "payoutTax": {
+      "model": "au-etp",
+      "taxFreeBase": 13598,
+      "taxFreePerYear": 6801,
+      "rateUnderPreservation": 0.32,
+      "rateOverPreservation": 0.17,
+      "preservationAge": 60,
+      "source": "ATO genuine redundancy payments, 2026-27 figures",
+      "sourceUrl": "https://www.ato.gov.au/individuals-and-families/jobs-and-employment-types/working-as-an-employee/leaving-your-job/genuine-redundancy-payments",
+      "lastChecked": "2026-07-25",
+      "notes": [
+        "The tax-free amount applies to the genuine redundancy payment only. Unused leave and notice pay are taxed differently.",
+        "The amount above the tax-free limit is an employment termination payment (ETP), generally taxed at 32% under age 60 or 17% at 60 and over, up to the ETP cap.",
+        "Figures are indexed each 1 July. Confirm with the ATO before relying on them."
+      ]
+    },
+    "notes": [
+      "Redundancy pay is based on your base rate for ordinary hours. Overtime, penalties and most allowances are excluded.",
+      "Casual employees are generally not entitled to notice or redundancy pay.",
+      "After 10 or more years the rate is 12 weeks, because long service leave applies separately.",
+      "Your employer can pay out your notice period instead of having you work it."
+    ]
+  },
+  "checklist": [
+    { "id": "au-1", "phase": "First 48 hours", "text": "Get the decision in writing: date, reason, and your final day.", "tags": ["all"] },
+    { "id": "au-2", "phase": "First 48 hours", "text": "Don't sign anything on the spot. A deed of release can wait until you have had advice.", "tags": ["all"] },
+    { "id": "au-3", "phase": "First 48 hours", "text": "Save copies of your contract, payslips, and your award or agreement.", "tags": ["all"] },
+    { "id": "au-4", "phase": "First week", "text": "Check your final pay covers notice, redundancy pay, and all unused leave.", "tags": ["all"] },
+    { "id": "au-5", "phase": "First week", "text": "Run your numbers here, then confirm them with the Fair Work Ombudsman calculator.", "tags": ["all"] },
+    { "id": "au-6", "phase": "First week", "text": "If you believe the redundancy may not be genuine, get free advice now. Unfair dismissal claims close 21 days after dismissal.", "tags": ["suspicious"], "urgent": true },
+    { "id": "au-7", "phase": "First week", "text": "Register with Centrelink early. Your payout can delay JobSeeker payments, so start the process now.", "tags": ["all"] },
+    { "id": "au-8", "phase": "First month", "text": "Check your superannuation. Insurance inside super can lapse when contributions stop.", "tags": ["all"] },
+    { "id": "au-9", "phase": "First month", "text": "Work out your budget runway: payout plus savings, divided by monthly essentials.", "tags": ["all"] },
+    { "id": "au-10", "phase": "First month", "text": "If money is tight, call the National Debt Helpline on 1800 007 007. Free and confidential.", "tags": ["financial-stress"] },
+    { "id": "au-11", "phase": "Moving forward", "text": "Update your resume and LinkedIn. Redundancy is a business decision, not a reflection of your performance.", "tags": ["all"] },
+    { "id": "au-12", "phase": "Moving forward", "text": "Ask whether your employer funds outplacement support. Many do.", "tags": ["all"] }
+  ],
+  "glossary": [
+    { "term": "Genuine redundancy", "definition": "The job itself no longer needs to be done by anyone, and your employer met any consultation obligations. If someone new is doing your old job, the redundancy may not be genuine and may be open to challenge." },
+    { "term": "National Employment Standards (NES)", "definition": "The 11 minimum entitlements that apply to almost all Australian employees, including minimum notice and redundancy pay. No contract can provide less." },
+    { "term": "Notice period", "definition": "The minimum warning your employer must give before your employment ends: 1 to 5 weeks, depending on service and age. It can be paid out instead of worked." },
+    { "term": "Payment in lieu of notice", "definition": "A payment made instead of working your notice period. It must equal the full amount you would have earned." },
+    { "term": "Redundancy pay", "definition": "A lump sum based on years of continuous service: 4 weeks at 1 year, up to 16 weeks at 9 to 10 years. Small businesses are generally exempt." },
+    { "term": "Deed of release", "definition": "A document in which you give up the right to make claims in exchange for a payment. Do not sign one without understanding it, ideally with legal advice." },
+    { "term": "Unfair dismissal", "definition": "A dismissal that was harsh, unjust or unreasonable. A redundancy that is not genuine can qualify. Claims must be lodged with the Fair Work Commission within 21 days." },
+    { "term": "Consultation obligations", "definition": "Most awards require your employer to consult you about major changes such as redundancy before deciding, including ways to avoid or reduce the impact." },
+    { "term": "JobSeeker Payment", "definition": "The main income support payment while you look for work, through Services Australia. A redundancy payout can delay the start date." },
+    { "term": "Income maintenance period", "definition": "A Centrelink waiting period based on your redundancy payout and leave payments. Register early regardless." },
+    { "term": "Long service leave", "definition": "Additional paid leave after a long period with one employer. Rules vary by state. Unused balances are usually paid out." },
+    { "term": "Employment Termination Payment (ETP)", "definition": "The tax category for parts of your payout. Genuine redundancy payments receive concessional tax treatment up to a cap. Check with the ATO." }
+  ],
+  "directory": [
+    { "name": "Fair Work Ombudsman", "category": "Rights & pay", "description": "The official source on entitlements, with a free calculator.", "url": "https://www.fairwork.gov.au", "phone": "13 13 94", "free": true, "partner": false },
+    { "name": "Fair Work Commission", "category": "Rights & pay", "description": "Where unfair dismissal claims are lodged. 21-day deadline.", "url": "https://www.fwc.gov.au", "phone": "1300 799 675", "free": true, "partner": false },
+    { "name": "Services Australia", "category": "Income support", "description": "JobSeeker and other income support. Register early.", "url": "https://www.servicesaustralia.gov.au", "phone": "13 28 50", "free": true, "partner": false },
+    { "name": "National Debt Helpline", "category": "Money help", "description": "Free, confidential financial counselling.", "url": "https://ndh.org.au", "phone": "1800 007 007", "free": true, "partner": false },
+    { "name": "Beyond Blue", "category": "Wellbeing", "description": "Mental health support, available any hour.", "url": "https://www.beyondblue.org.au", "phone": "1300 22 4636", "free": true, "partner": false },
+    { "name": "Listening Tree Counselling", "category": "Wellbeing", "description": "A quiet, confidential space to be heard. Unhurried one-to-one conversations with an accredited counsellor, by phone or WhatsApp.", "url": "http://listeningtreecounseling.com/", "phone": null, "free": false, "partner": true },
+    { "name": "Lifeline", "category": "Wellbeing", "description": "Crisis support, 24/7.", "url": "https://www.lifeline.org.au", "phone": "13 11 14", "free": true, "partner": false },
+    { "name": "Community legal centres", "category": "Legal advice", "description": "Free legal help near you, including employment law.", "url": "https://clcs.org.au", "phone": null, "free": true, "partner": false },
+    { "name": "Workforce Australia", "category": "Finding work", "description": "Government employment services and job search support.", "url": "https://www.workforceaustralia.gov.au", "phone": null, "free": true, "partner": false }
+  ]
+}

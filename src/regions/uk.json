@@ -1,0 +1,102 @@
+{
+  "id": "uk",
+  "name": "UK",
+  "fullName": "United Kingdom",
+  "flag": "🇬🇧",
+  "currency": "GBP",
+  "currencySymbol": "£",
+  "dateFormat": "DD/MM/YYYY",
+  "terminology": { "redundancy": "redundancy", "unemploymentBenefit": "Universal Credit" },
+  "deadline": { "days": 90, "body": "an employment tribunal (via Acas)", "url": "https://www.acas.org.uk/early-conciliation" },
+  "benefitUrl": "https://www.gov.uk/universal-credit",
+  "governance": {
+    "source": "GOV.UK (weekly cap £751 in Great Britain from 6 April 2026, Employment Rights (Increase of Limits) Order 2026)",
+    "sourceUrl": "https://www.gov.uk/redundancy-your-rights",
+    "officialCalc": "the GOV.UK calculator",
+    "lastChecked": "2026-07-24",
+    "reviewer": "UNREVIEWED. Engage a UK employment solicitor before public launch",
+    "changeLog": [
+      { "date": "2026-07-24", "change": "Initial ruleset. Cap £751 (GB). Northern Ireland differs (£783) and is not yet modelled." }
+    ]
+  },
+  "rules": {
+    "noticeBands": [
+      { "maxYears": 2, "weeks": 1 },
+      { "maxYears": null, "weeksPerYear": 1, "maxWeeks": 12 }
+    ],
+    "noticeAgeBonus": null,
+    "redundancyModel": "age-multiplier",
+    "ageMultipliers": [
+      { "maxAge": 22, "multiplier": 0.5 },
+      { "maxAge": 41, "multiplier": 1 },
+      { "maxAge": null, "multiplier": 1.5 }
+    ],
+    "maxServiceYears": 20,
+    "weeklyPayCap": 751,
+    "smallBusinessExemption": { "applies": false },
+    "qualifyingYears": 2,
+    "payoutTax": {
+      "model": "uk-30k",
+      "taxFreeCap": 30000,
+      "bands": [
+        { "label": "Basic rate (income up to £50,270)", "rate": 0.2 },
+        { "label": "Higher rate (£50,271 to £125,140)", "rate": 0.4 },
+        { "label": "Additional rate (over £125,140)", "rate": 0.45 }
+      ],
+      "source": "GOV.UK, tax on redundancy pay",
+      "sourceUrl": "https://www.gov.uk/redundancy-your-rights/tax-and-national-insurance",
+      "lastChecked": "2026-07-25",
+      "notes": [
+        "The first £30,000 of genuine redundancy pay is tax free. The excess is taxed at your marginal income tax rate.",
+        "Notice pay (including PILON) and holiday pay are taxed as normal earnings with National Insurance.",
+        "A large payout can push part of the excess into a higher band. Confirm with GOV.UK or a tax adviser."
+      ]
+    },
+    "notes": [
+      "You need 2 full years of service to qualify for statutory redundancy pay.",
+      "Weekly pay is capped at £751 in England, Scotland and Wales. Northern Ireland uses a different cap.",
+      "Redundancy pay up to £30,000 is tax free. Notice and holiday pay are taxed normally.",
+      "Your contract may provide more than the legal minimum. Check it.",
+      "Notice: 1 week after a month of service, then 1 week per year, capped at 12 weeks."
+    ]
+  },
+  "checklist": [
+    { "id": "uk-1", "phase": "First 48 hours", "text": "Get the decision in writing: reason, selection process, final date, and what you will be paid.", "tags": ["all"] },
+    { "id": "uk-2", "phase": "First 48 hours", "text": "Don't sign a settlement agreement on the spot. You are entitled to independent legal advice, usually at your employer's expense.", "tags": ["all"] },
+    { "id": "uk-3", "phase": "First 48 hours", "text": "Save your contract, payslips, and any redundancy policy or consultation documents.", "tags": ["all"] },
+    { "id": "uk-4", "phase": "First week", "text": "Check the package covers redundancy pay, notice pay, and all unused holiday.", "tags": ["all"] },
+    { "id": "uk-5", "phase": "First week", "text": "Run your numbers here, then confirm them with the GOV.UK calculator.", "tags": ["all"] },
+    { "id": "uk-6", "phase": "First week", "text": "If selection seemed unfair or consultation did not happen, contact Acas now. Tribunal claims close about 3 months after dismissal.", "tags": ["suspicious"], "urgent": true },
+    { "id": "uk-7", "phase": "First week", "text": "Apply for Universal Credit and New Style JSA today. Claims take weeks to start paying.", "tags": ["all"] },
+    { "id": "uk-8", "phase": "First month", "text": "Check your workplace pension and any life cover linked to it.", "tags": ["all"] },
+    { "id": "uk-9", "phase": "First month", "text": "Work out your budget runway: payout plus savings, divided by monthly essentials.", "tags": ["all"] },
+    { "id": "uk-10", "phase": "First month", "text": "If money is tight, get free debt advice early. StepChange, National Debtline and Citizens Advice are all free.", "tags": ["financial-stress"] },
+    { "id": "uk-11", "phase": "Moving forward", "text": "Update your CV and LinkedIn. Redundancy is about the role, not your performance.", "tags": ["all"] },
+    { "id": "uk-12", "phase": "Moving forward", "text": "With 2+ years of service you are entitled to reasonable paid time off to look for work or arrange training.", "tags": ["all"] }
+  ],
+  "glossary": [
+    { "term": "Statutory redundancy pay", "definition": "The legal minimum after 2 years' service: half a week's pay per year under 22, one week per year from 22 to 40, one and a half weeks per year from 41. Capped at 20 years and £751 a week." },
+    { "term": "Enhanced redundancy pay", "definition": "Anything above the statutory minimum, set by your contract or policy. Many employers pay more than the legal floor." },
+    { "term": "Statutory notice", "definition": "One week after a month of service, rising by one week per full year, up to 12 weeks. Your contract may provide more." },
+    { "term": "Settlement agreement", "definition": "A binding agreement in which you waive claims in exchange for payment. Only valid once you have had independent legal advice, which the employer usually funds." },
+    { "term": "Consultation", "definition": "Your employer must consult you before making you redundant. Proposing 20 or more redundancies triggers collective consultation rules with minimum timeframes." },
+    { "term": "Unfair dismissal", "definition": "Dismissal without a fair reason or fair process. A redundancy that is not genuine can qualify. Claims generally must start within 3 months, via Acas first." },
+    { "term": "Garden leave", "definition": "Serving your notice period at home. Still employed and paid, but not working." },
+    { "term": "Payment in lieu of notice (PILON)", "definition": "A lump sum instead of working your notice. Taxed as normal pay." },
+    { "term": "Universal Credit", "definition": "The main means-tested benefit. A redundancy payout counts toward your savings, which can reduce what you receive." },
+    { "term": "New Style Jobseeker's Allowance", "definition": "Up to 6 months of support based on your National Insurance record. Not means-tested against savings, so worth claiming even with a payout." },
+    { "term": "Acas", "definition": "Free, impartial help with workplace disputes. Early conciliation through Acas is the required first step before most tribunal claims." },
+    { "term": "£30,000 tax-free threshold", "definition": "Genuine redundancy payments are tax free up to £30,000. Notice and holiday pay are taxed as usual." }
+  ],
+  "directory": [
+    { "name": "GOV.UK redundancy rights", "category": "Rights & pay", "description": "Official guidance plus the statutory pay calculator.", "url": "https://www.gov.uk/redundancy-your-rights", "phone": null, "free": true, "partner": false },
+    { "name": "Acas", "category": "Rights & pay", "description": "Free advice on rights and disputes. First step for tribunal claims.", "url": "https://www.acas.org.uk", "phone": "0300 123 1100", "free": true, "partner": false },
+    { "name": "Citizens Advice", "category": "Legal advice", "description": "Free help with employment, benefits and debt.", "url": "https://www.citizensadvice.org.uk", "phone": "0800 144 8848", "free": true, "partner": false },
+    { "name": "Universal Credit", "category": "Income support", "description": "Apply online today. Claims take time to process.", "url": "https://www.gov.uk/universal-credit", "phone": null, "free": true, "partner": false },
+    { "name": "StepChange", "category": "Money help", "description": "Free debt advice charity.", "url": "https://www.stepchange.org", "phone": "0800 138 1111", "free": true, "partner": false },
+    { "name": "National Debtline", "category": "Money help", "description": "Free, independent debt advice.", "url": "https://www.nationaldebtline.org", "phone": "0808 808 4000", "free": true, "partner": false },
+    { "name": "Mind", "category": "Wellbeing", "description": "Mental health information and support.", "url": "https://www.mind.org.uk", "phone": "0300 123 3393", "free": true, "partner": false },
+    { "name": "Samaritans", "category": "Wellbeing", "description": "Someone to talk to, 24/7.", "url": "https://www.samaritans.org", "phone": "116 123", "free": true, "partner": false },
+    { "name": "National Careers Service", "category": "Finding work", "description": "Free careers advice, CV help and skills tools.", "url": "https://nationalcareers.service.gov.uk", "phone": "0800 100 900", "free": true, "partner": false }
+  ]
+}
