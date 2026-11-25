@@ -84,7 +84,7 @@ export const monetisation = {
    */
   forms: {
     endpoint: 'https://api.web3forms.com/submit',
-    accessKey: '',
+    accessKey: '8be586d6-213e-4749-9311-8a4bb9270a1e',
     callbackNotice: 'We will call you within one business day.'
   },
 
