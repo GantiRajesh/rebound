@@ -16,13 +16,13 @@ export async function submitForm(kind, answers) {
 
   const payload = {
     kind,
-    subject: `Rebound website: new ${kind === 'callback' ? 'callback request' : kind.replace('-', ' ')}`,
+    subject: `LetusRestart website: new ${kind === 'callback' ? 'callback request' : kind.replace('-', ' ')}`,
     ...answers,
     submittedAt: new Date().toISOString()
   };
   if (isWeb3Forms && accessKey) {
     payload.access_key = accessKey;
-    payload.from_name = 'Rebound website';
+    payload.from_name = 'LetusRestart';
   }
 
   if (configured) {
