@@ -24,7 +24,7 @@ You don't need to rent a server. The site builds to static files, and Vercel hos
    ```bash
    git init
    git add .
-   git commit -m "Rebound v1"
+   git commit -m "LetusRestart v1"
    git remote add origin https://github.com/YOUR-USERNAME/rebound.git
    git push -u origin main
    ```
@@ -81,7 +81,7 @@ AdSense pays you directly: you connect your own bank account inside Google's das
    **Turning ads off later:** set `enabled: false` on any single slot to remove just that
    placement (the layout closes the gap), or set the master `ads.enabled = false` to remove
    them all. Redeploy with `git push`. No other code changes needed.
-6. **Loosen the security header for Google's domains.** In `vercel.json`, extend the `Content-Security-Policy` value to allow AdSense (Google documents the exact list; at minimum add `pagead2.googlesyndication.com`, `googleads.g.doubleclick.net`, `tpc.googlesyndication.com` to `script-src`, `frame-src` and `img-src`).
+6. **Security header.** `vercel.json` already allows Google's ad domains and Web3Forms. If the browser console on a live page reports a blocked Google domain, add it to the matching directive. Full checklist, slot list and post-deploy checks are in [ADSENSE.md](ADSENSE.md). Also turn **Auto ads off** in the AdSense console so ads can only appear where the code allows.
 7. Commit, push, wait for the deploy, and check: ads appear only on home, glossary, directory and about. The plan, checklist and breathe pages stay clean; that's enforced in code.
 8. **Get paid.** AdSense → Payments → add your name, address, tax info, and bank account. Google deposits directly every month you're over the threshold.
 

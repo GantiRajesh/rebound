@@ -1,4 +1,4 @@
-# Rebound
+# LetusRestart
 
 Clear guidance from job loss to your next role. A calm, plain-English platform that tells anyone who has lost a job what happened, what they are legally owed where they live, and what to do next, in the right order.
 
@@ -38,6 +38,7 @@ Monetisation, all config-driven and all optional: 7 ad slots with per-slot switc
 Start with **`docs/OWNERS-MANUAL.md`**: how to use the site, how to change any text or component, how to deploy, maintain and fix. The rest:
 
 - `docs/GOING-LIVE.md` — domain, hosting, forms, payments, AdSense, AI review backend, referrals
+- `docs/ADSENSE.md` — AdSense wiring, slot map, console steps and post-deploy checks
 - `docs/ARCHITECTURE.md` — how it's built and how it expands
 - `docs/UPDATING.md` — safe-change workflow and pre-deploy tests
 - `docs/MONETISATION.md` — the revenue playbook

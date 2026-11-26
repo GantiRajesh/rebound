@@ -22,11 +22,13 @@ export const AD_ALLOWED_ROUTES = ['/', '/glossary', '/directory', '/about'];
 
 export const monetisation = {
   ads: {
-    enabled: false,             // MASTER SWITCH for Stream 1 (Google AdSense)
-    showPlaceholders: true,     // Show labelled empty panels before AdSense is connected,
+    enabled: true,              // MASTER SWITCH for Stream 1 (Google AdSense).
+                                // A slot only serves a real ad once it also has an adUnitId
+                                // below; until then it shows a labelled placeholder.
+    showPlaceholders: true,     // Show labelled empty panels for slots with no adUnitId yet,
                                 // so the layout is honest about where ads will live.
     provider: 'adsense',
-    clientId: '',               // e.g. 'ca-pub-XXXXXXXXXXXXXXXX'
+    clientId: 'ca-pub-1140217384450648',  // AdSense publisher ID (also in index.html and public/ads.txt)
 
     // Every placement on the site. enabled: false removes that one placement.
     // adUnitId: the slot ID from AdSense → Ads → By ad unit.
@@ -43,7 +45,7 @@ export const monetisation = {
   affiliates: {
     enabled: false,             // Stream 2: disclosed referral links
     disclosureText:
-      'Some links on this page are partner links. If you use them, Rebound may earn a referral fee at no cost to you. Partners never influence the guidance we give.'
+      'Some links on this page are partner links. If you use them, LetusRestart may earn a referral fee at no cost to you. Partners never influence the guidance we give.'
   },
 
   /**

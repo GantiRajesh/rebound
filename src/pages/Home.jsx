@@ -78,7 +78,7 @@ export default function Home() {
           <Link className="btn ghost small" to="/glossary">Or browse the glossary</Link>
         </div>
         <div className="phone">
-          <div className="phead">rebound · your plan</div>
+          <div className="phead">letusrestart · your plan</div>
           <div className="bubble bot">Let's work out where you stand.</div>
           <div className="bubble bot">What happened?</div>
           {teaserOpts.map((o) => (

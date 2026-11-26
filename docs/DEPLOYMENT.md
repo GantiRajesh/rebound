@@ -16,7 +16,7 @@ The site builds to static files (`dist/`), so it can be hosted anywhere — free
    ```bash
    git init
    git add .
-   git commit -m "Rebound MVP"
+   git commit -m "LetusRestart MVP"
    ```
    Push to GitHub: create an empty repo at github.com, then
    ```bash

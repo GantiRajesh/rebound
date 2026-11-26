@@ -42,7 +42,7 @@ export default function Services() {
   if (applying) {
     return (
       <>
-        <h1 className="page-title">Partner with Rebound</h1>
+        <h1 className="page-title">Partner with LetusRestart</h1>
         <p className="page-sub">Five short questions. We review every application and reply by email.</p>
         <StepForm steps={applySteps} onDone={onApply} doneLabel="Submit application" />
       </>
@@ -97,7 +97,7 @@ export default function Services() {
         <>
           <h2 style={{ margin: '26px 0 6px' }}>Our partner network in {region.fullName}</h2>
           <p className="disclosure">
-            Partners are vetted professionals. If you engage one, Rebound may receive a referral
+            Partners are vetted professionals. If you engage one, LetusRestart may receive a referral
             fee or placement fee at no cost to you. This never changes the free guidance on this
             site.
           </p>

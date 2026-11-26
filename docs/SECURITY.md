@@ -2,12 +2,13 @@
 
 ## Current posture (MVP)
 
-The strongest security property of this MVP is architectural: **there is no backend and no data leaves the device.** No accounts, no database, no cookies, no third-party scripts, no analytics. What can't be collected can't be breached.
+The strongest security property of this MVP is architectural: **there is no backend and no data leaves the device, apart from the forms a visitor chooses to submit.** No accounts, no database, no analytics. The only third-party script is Google AdSense, which runs on the general pages only (home, glossary, directory, about) and never receives anything a visitor types into the plan, checklist or forms. AdSense may set its own cookies, which the About page discloses. What can't be collected can't be breached.
 
 In place:
 - All user state (triage answers, calculator inputs, checklist progress, region choice) in namespaced localStorage; one-click erase on `/about`.
-- Security headers shipped via `vercel.json` (CSP with `default-src 'self'`, X-Frame-Options DENY, nosniff, HSTS, Referrer-Policy, Permissions-Policy). Replicate at whatever host you choose — see DEPLOYMENT.md.
-- No external fonts/CDNs at runtime — the CSP can stay strict. The one exception is `connect-src`, which allows `https://api.web3forms.com` so the callback and partner forms can submit. If you switch form providers (e.g. Formspree), update `connect-src` in `vercel.json` to match.
+- Security headers shipped via `vercel.json` (CSP with `default-src 'self'` plus an allowlist for Google AdSense and Web3Forms, X-Frame-Options DENY, nosniff, HSTS, Referrer-Policy, Permissions-Policy). Replicate at whatever host you choose — see DEPLOYMENT.md.
+- No external fonts/CDNs at runtime. The CSP in `vercel.json` has two deliberate exceptions: `connect-src` allows `https://api.web3forms.com` so the callback and partner forms can submit (if you switch form providers, update it), and the script/frame/img/connect directives allow Google's ad domains for AdSense (see ADSENSE.md). Google changes these domains over time, so check the browser console after deploy.
+- The AdSense loader is on every page, but `AdSlot.jsx` only renders ad units on allowed routes. Keep Auto ads off in the AdSense console so Google cannot add ads to the protected pages.
 - Directory/source links use `rel="noopener noreferrer"`.
 - Dependencies: 3 runtime packages (react, react-dom, react-router-dom). Run `npm audit` before each deploy; update quarterly.
 

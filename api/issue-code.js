@@ -52,7 +52,7 @@ export default async function handler(req, res) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          from: 'Rebound <access@yourdomain.com>',
+          from: 'LetusRestart <access@yourdomain.com>',
           to: email,
           subject: 'Your AI document review access code',
           text:
