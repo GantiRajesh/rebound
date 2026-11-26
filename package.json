@@ -2,7 +2,7 @@
   "name": "rebound",
   "private": true,
   "version": "0.1.0",
-  "description": "Rebound. a calm companion from job loss to what's next.",
+  "description": "LetusRestart. a calm companion from job loss to what's next.",
   "type": "module",
   "scripts": {
     "dev": "vite",
