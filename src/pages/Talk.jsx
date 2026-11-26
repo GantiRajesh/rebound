@@ -49,9 +49,8 @@ export default function Talk() {
             </p>
           ) : (
             <p>
-              Your request has been saved on this device. Callback requests will be delivered once
-              the contact service is connected (see docs/GOING-LIVE.md). Nothing has been sent
-              anywhere yet.
+              Nothing has been sent or saved anywhere yet.
+              
             </p>
           )}
           <p style={{ marginTop: 12, color: 'var(--soft)', fontSize: '.9rem' }}>
