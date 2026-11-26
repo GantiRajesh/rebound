@@ -7,7 +7,7 @@ The strongest security property of this MVP is architectural: **there is no back
 In place:
 - All user state (triage answers, calculator inputs, checklist progress, region choice) in namespaced localStorage; one-click erase on `/about`.
 - Security headers shipped via `vercel.json` (CSP with `default-src 'self'`, X-Frame-Options DENY, nosniff, HSTS, Referrer-Policy, Permissions-Policy). Replicate at whatever host you choose — see DEPLOYMENT.md.
-- No external fonts/CDNs at runtime — the CSP can stay strict.
+- No external fonts/CDNs at runtime — the CSP can stay strict. The one exception is `connect-src`, which allows `https://api.web3forms.com` so the callback and partner forms can submit. If you switch form providers (e.g. Formspree), update `connect-src` in `vercel.json` to match.
 - Directory/source links use `rel="noopener noreferrer"`.
 - Dependencies: 3 runtime packages (react, react-dom, react-router-dom). Run `npm audit` before each deploy; update quarterly.
 

@@ -36,6 +36,26 @@ export default function Talk() {
     window.scrollTo(0, 0);
   };
 
+  if (result && result.error) {
+    return (
+      <div className="wiz">
+        <div className="card">
+          <h1 className="page-title" style={{ fontSize: '1.4rem' }}>Sorry, that did not go through.</h1>
+          <p>
+            We could not send your request just now, so we have not received it. Please check your
+            connection and try again.
+          </p>
+          <p style={{ marginTop: 12, color: 'var(--soft)', fontSize: '.9rem' }}>
+            If your matter is urgent, the free services in{' '}
+            <Link to="/directory">Support</Link> are available now, including phone lines.
+          </p>
+        </div>
+        <button className="btn" onClick={() => { setResult(null); setStarted(false); }}>Try again</button>{' '}
+        <Link className="btn ghost" to="/">Back to home</Link>
+      </div>
+    );
+  }
+
   if (result) {
     return (
       <div className="wiz">
@@ -49,8 +69,8 @@ export default function Talk() {
             </p>
           ) : (
             <p>
-              Nothing has been sent or saved anywhere yet.
-              
+              Nothing has been sent yet. The contact service is not connected, so your answers are
+              only stored on this device.
             </p>
           )}
           <p style={{ marginTop: 12, color: 'var(--soft)', fontSize: '.9rem' }}>

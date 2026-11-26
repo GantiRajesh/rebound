@@ -134,7 +134,9 @@ export default function Services() {
         </p>
         {applied ? (
           <p style={{ fontWeight: 600 }}>
-            {applied.delivered
+            {applied.error
+              ? 'Sorry, we could not send your application just now. Please try again in a moment.'
+              : applied.delivered
               ? 'Thank you. Your application has been received and we will reply by email.'
               : 'Thank you. Your application has been saved on this device and will be delivered once the contact service is connected.'}
           </p>
